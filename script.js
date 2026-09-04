@@ -10,7 +10,7 @@ formContato.addEventListener("submit", (evento) => {
   const nome = document.querySelector("#nome").value;
   const assunto = document.querySelector("#assunto").value;
   const mensagem = document.querySelector("#mensagem").value;
-  resposta.textContent = Obrigado pelo contato, ${nome}!;
+  resposta.textContent = "Obrigado pelo contato, " + nome + "!";
 });
 
  // Verifica se algum campo está vazio
@@ -23,7 +23,7 @@ formContato.addEventListener("submit", (evento) => {
     alert("Formulário enviado com sucesso!");
 
     // Mostra mensagem na página
-    resposta.textContent = Obrigado pelo contato, ${nome}!;
+    resposta.textContent = "Obrigado pelo contato, " + nome + "!";
 
     // Limpa os campos do formulário
     formContato.reset();
