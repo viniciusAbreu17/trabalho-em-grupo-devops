@@ -7,14 +7,15 @@ botaoDestaque.addEventListener("click", () => {
 });
 formContato.addEventListener("submit", (evento) => {
   evento.preventDefault();
-  const nome = document.querySelector("#nome").value;
-  const assunto = document.querySelector("#assunto").value;
-  const mensagem = document.querySelector("#mensagem").value;
-  resposta.textContent = "Obrigado pelo contato, " + nome + "!";
-});
+
+// Pega os valores dos campos
+    const nome = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    const mensagem = document.querySelector("#mensagem").value;
+
 
  // Verifica se algum campo está vazio
-    if (nome === "" || assunto === "" || mensagem === "") {
+    if (nome === "" || email === "" || mensagem === "") {
         alert("Por favor, preencha todos os campos!");
         return;
     }
@@ -23,7 +24,7 @@ formContato.addEventListener("submit", (evento) => {
     alert("Formulário enviado com sucesso!");
 
     // Mostra mensagem na página
-    resposta.textContent = "Obrigado pelo contato, " + nome + "!";
+    resposta.textContent = `Obrigado pelo contato, ${nome}!`;
 
     // Limpa os campos do formulário
     formContato.reset();
