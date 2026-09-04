@@ -8,12 +8,13 @@ botaoDestaque.addEventListener("click", () => {
 formContato.addEventListener("submit", (evento) => {
   evento.preventDefault();
   const nome = document.querySelector("#nome").value;
+  const assunto = document.querySelector("#assunto").value;
+  const mensagem = document.querySelector("#mensagem").value;
   resposta.textContent = Obrigado pelo contato, ${nome}!;
 });
 
  // Verifica se algum campo está vazio
-    if (nome === ""  assunto === "" 
- mensagem === "") {
+    if (nome === "" || assunto === "" || mensagem === "") {
         alert("Por favor, preencha todos os campos!");
         return;
     }
